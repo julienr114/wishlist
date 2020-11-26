@@ -35,6 +35,16 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  
+  computed: {
+    lists () {
+      return this.$store.state.lists
+    }
+  },
+
+  mounted () {
+    this.$store.dispatch('bindListsRef')
   }
 }
 </script>
